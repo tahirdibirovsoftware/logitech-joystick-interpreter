@@ -1,4 +1,4 @@
-import HID from "node-hid";
+import HID from 'node-hid';
 
 class HIDService {
     private static instance: HIDService;
