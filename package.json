@@ -1,6 +1,12 @@
 {
+  "scripts": {
+    "start": "tsc && node dist/main"
+  },
   "devDependencies": {
     "@types/node": "^20.14.10",
     "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "node-hid": "^3.1.0"
   }
 }
