@@ -1,13 +1,6 @@
-import DataInterpreter from "./DataInterpreter";
-import HIDService from "./HIDService";
+import EngineInterpreter from "./interpreter/EngineInterpreter";
+import HIDService from "./services/HIDService";
 
-
-const main = async ()=> {
-
-   (await HIDService.getDeviceByName("log")).on("data", (data)=>{
-    console.log(DataInterpreter.engineInterpreter(data))
-   })
-    
+const main = async () => {
+   
 }
-
-main();
