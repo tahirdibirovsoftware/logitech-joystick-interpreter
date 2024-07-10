@@ -33,7 +33,7 @@ const main = async () => {
             try {
                 const currentTime = Date.now();
                 if (currentTime - lastTransmissionTime >= THROTTLE_DELAY_MS) {
-                    const interpretedData = EngineInterpreter.engineInterpreter(data).toString();
+                    const interpretedData = EngineInterpreter.interprete(data).toString();
                     console.log('Interpreted Data:', interpretedData);
 
                     port.write(interpretedData, (err) => {

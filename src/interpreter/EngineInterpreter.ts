@@ -4,7 +4,7 @@ class EngineInterpreter {
     private static readonly RANGE = EngineInterpreter.MAX_VALUE - EngineInterpreter.MIN_VALUE;
     private static readonly SCALE_FACTOR = EngineInterpreter.RANGE / 255;
 
-    public engineInterpreter(data: Buffer): number {
+    public interprete(data: Buffer): number {
         if (data.length < 6) {
             throw new Error('Buffer too short');
         }
