@@ -16,7 +16,7 @@ class HIDService {
         return HID.devices();
     }
 
-    public async getDeviceByName(deviceName: string): Promise<HID.HID> {
+    public async getDeviceByName(deviceName: string): Promise<any> {
         const devices = await this.getDevices();
         const device = devices.find(dev => 
             dev.manufacturer?.toLowerCase().includes(deviceName.toLowerCase())
@@ -29,8 +29,8 @@ class HIDService {
         if (!device.path) {
             throw new Error(`Device found but path is undefined`);
         }
-
-        return new HID.HID(device.path);
+        console.log(device.path)
+        return await HID.HIDAsync.open(device.path);
     }
 }
 
