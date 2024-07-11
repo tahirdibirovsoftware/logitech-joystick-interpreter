@@ -13,7 +13,7 @@ const initializeSerialPort = async (deviceName: string, baudRate: number) => {
 
 const main = async () => {
     try {
-        const port = await initializeSerialPort('1a', 57600);
+        const port = await initializeSerialPort('ftd', 57600);
         const parser = port.pipe(new ReadlineParser());
 
         const device = await HIDService.getDeviceByName('log');
